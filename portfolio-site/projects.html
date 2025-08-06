@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bilawal Ali Hero</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Glowing Circle SVG Background */
+    .circle-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+    }
+
+    .circle-bg svg {
+      width: 300px;
+      height: 300px;
+    }
+
+    .glow-circle {
+      fill: none;
+      stroke: #ff2f2f;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-dasharray: 943; /* 2 * π * r (approx 2π*150) */
+      stroke-dashoffset: 943;
+      animation: drawCircle 2.5s ease-out forwards, glowPulse 2s infinite ease-in-out;
+      filter: drop-shadow(0 0 10px #ff2f2f);
+    }
+
+    @keyframes drawCircle {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 10px #ff2f2f);
+      }
+      50% {
+        filter: drop-shadow(0 0 20px #ff4d4d);
+      }
+    }
+
+    .hero-content {
+      z-index: 1;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content h1 {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero-content p {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      font-size: 1.2rem;
+      color: white;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
+
+    .cta-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.5) 0%, transparent 100%);
+      transform: skewX(-25deg);
+      animation: shine 2s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+
+    .cta-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 3rem; }
+      .hero-content p { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="circle-bg">
+      <svg viewBox="0 0 300 300">
+        <circle class="glow-circle" cx="150" cy="150" r="150" />
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <h1>BILAWAL ALI</h1>
+      <p>FULLSTACK DEVELOPER</p>
+      <a href="#contact" class="cta-button">Hire Me</a>
+    </div>
+  </section>
+
+</body>
+</html>

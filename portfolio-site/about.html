@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ===== ABOUT US - BLUE THEME REDESIGN ===== */
+.about-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, rgba(5, 15, 35, 0.95), rgba(15, 25, 45, 0.95));
+  color: #e0f7ff;
+}
+
+.about-me-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(to right, #38bdf8, #e0f7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.custom-heading-line .line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  border-radius: 2px;
+}
+
+.custom-heading-line .dot {
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+.about-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.overlay-name {
+  background: linear-gradient(to top, rgba(5, 15, 35, 0.9), transparent);
+}
+
+.overlay-name h2 {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.personal-details li {
+  color: #94a3b8;
+}
+
+.personal-details li strong {
+  color: #38bdf8;
+}
+
+.skill-card {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+}
+
+.skill-card h4 {
+  color: #e0f7ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .about-card {
+    max-width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <section class="about-section">
+  <div class="container">
+    <div class="about-me-heading">
+      <h2>About <span>Us</span></h2>
+      <div class="custom-heading-line">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="about-left">
+        <div class="about-card">
+          <img src="your-team-image.jpg" alt="Our Team">
+          <div class="overlay-name">
+            <h2>Our Team</h2>
+            <p>Innovators & Creators</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="about-text">
+          <p>We're a passionate team of developers and designers dedicated to creating cutting-edge digital experiences. Our mission is to blend innovation with elegance, delivering solutions that inspire and transform businesses.</p>
+        </div>
+
+        <ul class="personal-details">
+          <li><strong>Experience:</strong> 5+ Years in Web Development</li>
+          <li><strong>Specialization:</strong> UI/UX & Full-Stack Solutions</li>
+          <li><strong>Approach:</strong> Client-Centric & Agile</li>
+        </ul>
+
+        <div class="about-skills">
+          <div class="skill-card">
+            <img src="web-design-icon.svg" alt="Design">
+            <h4>UI/UX Design</h4>
+          </div>
+          <div class="skill-card">
+            <img src="coding-icon.svg" alt="Development">
+            <h4>Web Development</h4>
+          </div>
+          <div class="skill-card">
+            <img src="mobile-icon.svg" alt="Mobile">
+            <h4>Mobile Apps</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
